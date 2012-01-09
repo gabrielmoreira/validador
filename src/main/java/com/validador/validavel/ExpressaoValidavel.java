@@ -7,6 +7,14 @@ public class ExpressaoValidavel<T extends ExpressaoValidavel<?>> extends Abstrac
 		super(null, expressao);
 	}
 
+	public ExpressaoValidavel(String nomeCampo, Boolean expressao) {
+		super(nomeCampo, expressao);
+	}
+
+	public ExpressaoValidavel(String nomeObjeto, String nomeCampo, Boolean expressao) {
+		super(nomeObjeto, nomeCampo, expressao);
+	}
+
 	public T verdadeira() {
 		regra(RegraExpressao.verdadeira());
 		return me();
@@ -24,6 +32,16 @@ public class ExpressaoValidavel<T extends ExpressaoValidavel<?>> extends Abstrac
 
 	public T falsa(String regra) {
 		regra(RegraExpressao.falsa(regra));
+		return me();
+	}
+
+	public T verdadeira(String regra, Object... parametros) {
+		regra(RegraExpressao.verdadeira(regra, parametros));
+		return me();
+	}
+
+	public T falsa(String regra, Object... parametros) {
+		regra(RegraExpressao.falsa(regra, parametros));
 		return me();
 	}
 

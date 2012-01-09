@@ -6,6 +6,7 @@ public class RegraExpressao extends AbstractRegra<Boolean> {
 	private static final String REGRA_FALSA = "expressaoDeveSerFalsa";
 	private String regra;
 	private Boolean esperado;
+	private Object[] parametros;
 
 	public RegraExpressao(Boolean esperado) {
 		this.esperado = esperado;
@@ -17,10 +18,20 @@ public class RegraExpressao extends AbstractRegra<Boolean> {
 		this.regra = regra;
 	}
 
+	public RegraExpressao(boolean esperado, String regra, Object[] parametros) {
+		this.esperado = esperado;
+		this.regra = regra;
+		this.parametros = parametros;
+	}
+
 	@Override
 	public boolean validar(Boolean valor, Resultado resultado) {
 		if (esperado != valor) {
-			resultado.erro(regra);
+			if (parametros == null) {
+				resultado.erro(regra);
+			} else {
+				resultado.erro(regra, parametros);
+			}
 			return false;
 		}
 		return true;
@@ -40,6 +51,14 @@ public class RegraExpressao extends AbstractRegra<Boolean> {
 
 	public static RegraExpressao falsa(String regra) {
 		return new RegraExpressao(false, regra);
+	}
+
+	public static RegraExpressao verdadeira(String regra, Object... parametros) {
+		return new RegraExpressao(true, regra, parametros);
+	}
+
+	public static RegraExpressao falsa(String regra, Object... parametros) {
+		return new RegraExpressao(false, regra, parametros);
 	}
 
 }

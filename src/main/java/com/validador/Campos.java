@@ -74,6 +74,14 @@ public class Campos {
 		return new ExpressaoValidavel<ExpressaoValidavel<?>>(expressao);
 	}
 
+	public static ExpressaoValidavel<?> expressao(String nomeCampo, boolean expressao) {
+		return new ExpressaoValidavel<ExpressaoValidavel<?>>(nomeCampo, expressao);
+	}
+
+	public static ExpressaoValidavel<?> expressao(String nomeObjeto, String nomeCampo, boolean expressao) {
+		return new ExpressaoValidavel<ExpressaoValidavel<?>>(nomeObjeto, nomeCampo, expressao);
+	}
+
 	public static ObjetoValidavel<?> objeto(String nomeCampo, Object objeto) {
 		return new ObjetoValidavel<ObjetoValidavel<?>>(nomeCampo, objeto);
 	}
