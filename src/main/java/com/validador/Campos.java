@@ -1,9 +1,11 @@
 package com.validador;
 
 import java.math.BigDecimal;
+import java.util.Date;
 
 import com.validador.validavel.BigDecimalValidavel;
 import com.validador.validavel.ByteValidavel;
+import com.validador.validavel.DateValidavel;
 import com.validador.validavel.DoubleValidavel;
 import com.validador.validavel.ExpressaoValidavel;
 import com.validador.validavel.IntegerValidavel;
@@ -70,6 +72,14 @@ public class Campos {
 		return new StringValidavel<StringValidavel<?>>(nomeCampo, valorCampo);
 	}
 
+	public static DateValidavel<?> data(String nomeObjeto, String nomeCampo, Date valorCampo) {
+		return new DateValidavel<DateValidavel<?>>(nomeObjeto, nomeCampo, valorCampo);
+	}
+
+	public static DateValidavel<?> data(String nomeCampo, Date valorCampo) {
+		return new DateValidavel<DateValidavel<?>>(nomeCampo, valorCampo);
+	}
+
 	public static ExpressaoValidavel<?> expressao(boolean expressao) {
 		return new ExpressaoValidavel<ExpressaoValidavel<?>>(expressao);
 	}
@@ -81,5 +91,4 @@ public class Campos {
 	public static ObjetoValidavel<?> objeto(String nomeObjeto, String nomeCampo, Object objeto) {
 		return new ObjetoValidavel<ObjetoValidavel<?>>(nomeObjeto, nomeCampo, objeto);
 	}
-
 }
