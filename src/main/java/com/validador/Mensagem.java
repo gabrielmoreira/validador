@@ -48,6 +48,22 @@ public class Mensagem {
 		return new Builder<Builder<?>>().tipo(TipoMensagem.ERRO);
 	}
 
+	public static Builder<?> alerta() {
+		return new Builder<Builder<?>>().tipo(TipoMensagem.ALERTA);
+	}
+
+	public static Builder<?> info() {
+		return new Builder<Builder<?>>().tipo(TipoMensagem.INFO);
+	}
+
+	public static Builder<?> sucesso() {
+		return new Builder<Builder<?>>().tipo(TipoMensagem.SUCESSO);
+	}
+
+	public static Builder<?> tipo(TipoMensagem tipo) {
+		return new Builder<Builder<?>>().tipo(tipo);
+	}
+
 	public static class Builder<T extends Builder<?>> {
 		@SuppressWarnings("unchecked")
 		private T me = (T) this;
