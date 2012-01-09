@@ -1,9 +1,7 @@
 package com.validador;
 
-import static com.validador.Campos.numero;
-import static com.validador.Campos.texto;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static com.validador.Campos.*;
+import static org.junit.Assert.*;
 
 import java.math.BigDecimal;
 
@@ -22,7 +20,7 @@ public class CamposTest {
 	@Test
 	public void instanceTest() {
 		Campos camposInstance = new Campos();
-		assertTrue(camposInstance != null);
+		assertNotNull(camposInstance);
 	}
 
 	@Test
