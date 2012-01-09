@@ -24,4 +24,8 @@ public class Validar {
 		return getErros().isEmpty();
 	}
 
+	public boolean temErro() {
+		return !valido();
+	}
+
 }

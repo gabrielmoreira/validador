@@ -5,8 +5,10 @@ import java.math.BigDecimal;
 import com.validador.validavel.BigDecimalValidavel;
 import com.validador.validavel.ByteValidavel;
 import com.validador.validavel.DoubleValidavel;
+import com.validador.validavel.ExpressaoValidavel;
 import com.validador.validavel.IntegerValidavel;
 import com.validador.validavel.LongValidavel;
+import com.validador.validavel.ObjetoValidavel;
 import com.validador.validavel.ShortValidavel;
 import com.validador.validavel.StringValidavel;
 
@@ -66,6 +68,18 @@ public class Campos {
 
 	public static StringValidavel<?> texto(String nomeCampo, String valorCampo) {
 		return new StringValidavel<StringValidavel<?>>(nomeCampo, valorCampo);
+	}
+
+	public static ExpressaoValidavel<?> expressao(boolean expressao) {
+		return new ExpressaoValidavel<ExpressaoValidavel<?>>(expressao);
+	}
+
+	public static ObjetoValidavel<?> objeto(String nomeCampo, Object objeto) {
+		return new ObjetoValidavel<ObjetoValidavel<?>>(nomeCampo, objeto);
+	}
+
+	public static ObjetoValidavel<?> objeto(String nomeObjeto, String nomeCampo, Object objeto) {
+		return new ObjetoValidavel<ObjetoValidavel<?>>(nomeObjeto, nomeCampo, objeto);
 	}
 
 }

@@ -1,6 +1,7 @@
 package com.validador.validavel;
 
 public class ByteValidavel<T extends ByteValidavel<?>> extends NumericoValidavel<T, Byte> {
+	private static final byte ZERO = (byte) 0;
 
 	public ByteValidavel(String nomeCampo, Byte valorCampo) {
 		super(nomeCampo, valorCampo);
@@ -8,6 +9,11 @@ public class ByteValidavel<T extends ByteValidavel<?>> extends NumericoValidavel
 
 	public ByteValidavel(String nomeObjeto, String nomeCampo, Byte valorCampo) {
 		super(nomeObjeto, nomeCampo, valorCampo);
+	}
+
+	@Override
+	protected Byte zero() {
+		return ZERO;
 	}
 
 }

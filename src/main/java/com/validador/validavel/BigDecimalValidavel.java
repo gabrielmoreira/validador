@@ -12,4 +12,9 @@ public class BigDecimalValidavel<T extends BigDecimalValidavel<?>> extends Numer
 		super(nomeObjeto, nomeCampo, valorCampo);
 	}
 
+	@Override
+	protected BigDecimal zero() {
+		return BigDecimal.ZERO;
+	}
+
 }
