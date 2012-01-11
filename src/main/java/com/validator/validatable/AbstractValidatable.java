@@ -3,6 +3,7 @@ package com.validator.validatable;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.validator.rule.EmptyValidationResult;
 import com.validator.rule.FilledRule;
 import com.validator.rule.Rule;
 import com.validator.rule.ValidationResult;
@@ -70,7 +71,7 @@ public abstract class AbstractValidatable<T extends AbstractValidatable<?, ?>, K
 
 	protected boolean verify(FieldValidationResult fieldValidationResult) {
 		ValidationResult validationResult = new FieldValidationResultValidatableAdapter(this, fieldValidationResult);
-		if (optional && !FilledRule.INSTANCE.validate(this, validationResult)) {
+		if (optional && !FilledRule.INSTANCE.validate(this, EmptyValidationResult.INSTANCE)) {
 			return true;
 		}
 		for (Rule<?> rule : rules) {
