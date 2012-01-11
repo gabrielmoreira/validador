@@ -18,7 +18,7 @@ public class FieldValidationResultMessageAdapter implements FieldValidationResul
 		messages.add(buildMessage(object, fieldName, code).parameters(parameters).build());
 	}
 
-	private Message.Builder<?> buildMessage(String object, String fieldName, String code) {
+	private Message.Builder buildMessage(String object, String fieldName, String code) {
 		return Message.error().fieldName(fieldName).code(code).keys(buildKeys(object, fieldName, code));
 	}
 

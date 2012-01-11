@@ -44,65 +44,63 @@ public class Message {
 		return "Message [" + (type != null ? "type=" + type + ", " : "") + (fieldName != null ? "fieldName=" + fieldName + ", " : "") + (code != null ? "code=" + code + ", " : "") + (keys != null ? "keys=" + Arrays.toString(keys) + ", " : "") + (parameters != null ? "parameters=" + Arrays.toString(parameters) + ", " : "") + (message != null ? "message=" + message : "") + "]";
 	}
 
-	public static Builder<?> error() {
-		return new Builder<Builder<?>>().type(MessageType.ERROR);
+	public static Builder error() {
+		return new Builder().type(MessageType.ERROR);
 	}
 
-	public static Builder<?> warn() {
-		return new Builder<Builder<?>>().type(MessageType.WARN);
+	public static Builder warn() {
+		return new Builder().type(MessageType.WARN);
 	}
 
-	public static Builder<?> info() {
-		return new Builder<Builder<?>>().type(MessageType.INFO);
+	public static Builder info() {
+		return new Builder().type(MessageType.INFO);
 	}
 
-	public static Builder<?> success() {
-		return new Builder<Builder<?>>().type(MessageType.SUCCESS);
+	public static Builder success() {
+		return new Builder().type(MessageType.SUCCESS);
 	}
 
-	public static Builder<?> type(MessageType type) {
-		return new Builder<Builder<?>>().type(type);
+	public static Builder type(MessageType type) {
+		return new Builder().type(type);
 	}
 
-	public static class Builder<T extends Builder<?>> {
-		@SuppressWarnings("unchecked")
-		private T me = (T) this;
+	public static class Builder {
 		private Message message = new Message();
 
-		public T fieldName(String fieldName) {
+		public Builder fieldName(String fieldName) {
 			this.message.fieldName = fieldName;
-			return me;
+			return this;
 		}
 
-		public T code(String code) {
+		public Builder code(String code) {
 			this.message.code = code;
-			return me;
+			return this;
 		}
 
-		public T keys(String... keys) {
+		public Builder keys(String... keys) {
 			this.message.keys = keys;
-			return me;
+			return this;
 		}
 
-		public Builder<?> type(MessageType type) {
+		public Builder type(MessageType type) {
 			this.message.type = type;
-			return me;
+			return this;
 		}
 
 		/**
 		 * Atenção: utilizar parâmetros imutáveis ou clonar para garantir consistência. 
 		 */
-		public Builder<?> parameters(List<Object> parameters) {
+		public Builder parameters(List<Object> parameters) {
 			this.message.parameters = parameters.toArray(new Object[parameters.size()]);
-			return me;
+			return this;
 		}
 
 		/**
 		 * Atenção: utilizar parâmetros imutáveis ou clonar para garantir consistência. 
 		 */
-		public Builder<?> parameters(Object... parameters) {
+		public Builder parameters(Object... parameters) {
 			this.message.parameters = parameters;
-			return me;
+			return this;
 		}
 
 		public Message build() {
