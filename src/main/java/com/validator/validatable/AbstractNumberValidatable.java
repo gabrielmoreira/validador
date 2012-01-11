@@ -21,13 +21,13 @@ public abstract class AbstractNumberValidatable<T extends AbstractNumberValidata
 		return me();
 	}
 
-	public T greaterOrequalsToZero() {
-		greaterOrequalsTo(zero());
+	public T greaterOrEqualToZero() {
+		greaterOrEqualTo(zero());
 		return me();
 	}
 
-	public T lessOrequalsToZero() {
-		lessOrequalsTo(zero());
+	public T lessOrEqualToZero() {
+		lessOrEqualTo(zero());
 		return me();
 	}
 

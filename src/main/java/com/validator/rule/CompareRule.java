@@ -18,8 +18,8 @@ public class CompareRule extends AbstractRule<Comparable<?>> {
 		return new CompareRule(expectedValue, 1, 1, "greaterThan");
 	}
 
-	public static CompareRule greaterOrequalsTo(Comparable<?> expectedValue) {
-		return new CompareRule(expectedValue, 0, 1, "greaterOrequalsTo");
+	public static CompareRule greaterOrEqualTo(Comparable<?> expectedValue) {
+		return new CompareRule(expectedValue, 0, 1, "greaterOrEqualTo");
 	}
 
 	public static CompareRule equalsTo(Comparable<?> expectedValue) {
@@ -30,8 +30,8 @@ public class CompareRule extends AbstractRule<Comparable<?>> {
 		return new CompareRule(expectedValue, -1, -1, "lessThan");
 	}
 
-	public static CompareRule lessOrequalsTo(Comparable<?> expectedValue) {
-		return new CompareRule(expectedValue, -1, 0, "lessOrequalsTo");
+	public static CompareRule lessOrEqualTo(Comparable<?> expectedValue) {
+		return new CompareRule(expectedValue, -1, 0, "lessOrEqualTo");
 	}
 
 	@Override

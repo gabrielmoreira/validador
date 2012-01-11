@@ -17,9 +17,9 @@ public abstract class CompareValidatable<T extends CompareValidatable<?, ?>, K> 
 		return me();
 	}
 
-	public T greaterOrequalsTo(K expectedValue) {
+	public T greaterOrEqualTo(K expectedValue) {
 		filled();
-		is(CompareRule.greaterOrequalsTo((Comparable<?>) expectedValue));
+		is(CompareRule.greaterOrEqualTo((Comparable<?>) expectedValue));
 		return me();
 	}
 
@@ -35,9 +35,9 @@ public abstract class CompareValidatable<T extends CompareValidatable<?, ?>, K> 
 		return me();
 	}
 
-	public T lessOrequalsTo(K expectedValue) {
+	public T lessOrEqualTo(K expectedValue) {
 		filled();
-		is(CompareRule.lessOrequalsTo((Comparable<?>) expectedValue));
+		is(CompareRule.lessOrEqualTo((Comparable<?>) expectedValue));
 		return me();
 	}
 
