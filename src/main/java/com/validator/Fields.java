@@ -16,87 +16,87 @@ import com.validator.validatable.StringValidatable;
 
 public class Fields {
 
-	public static BigDecimalValidatable<?> number(String fieldName, BigDecimal fieldValue) {
-		return new BigDecimalValidatable<BigDecimalValidatable<?>>(fieldName, fieldValue);
+	public static <T extends BigDecimalValidatable<?>> BigDecimalValidatable<T> number(String fieldName, BigDecimal fieldValue) {
+		return new BigDecimalValidatable<T>(fieldName, fieldValue);
 	}
 
-	public static BigDecimalValidatable<?> number(String objectName, String fieldName, BigDecimal fieldValue) {
-		return new BigDecimalValidatable<BigDecimalValidatable<?>>(objectName, fieldName, fieldValue);
+	public static <T extends BigDecimalValidatable<?>> BigDecimalValidatable<T> number(String objectName, String fieldName, BigDecimal fieldValue) {
+		return new BigDecimalValidatable<T>(objectName, fieldName, fieldValue);
 	}
 
-	public static ByteValidatable<?> number(String fieldName, Byte fieldValue) {
-		return new ByteValidatable<ByteValidatable<?>>(fieldName, fieldValue);
+	public static <T extends ByteValidatable<?>> ByteValidatable<T> number(String fieldName, Byte fieldValue) {
+		return new ByteValidatable<T>(fieldName, fieldValue);
 	}
 
-	public static ByteValidatable<?> number(String objectName, String fieldName, Byte fieldValue) {
-		return new ByteValidatable<ByteValidatable<?>>(objectName, fieldName, fieldValue);
+	public static <T extends ByteValidatable<?>> ByteValidatable<T> number(String objectName, String fieldName, Byte fieldValue) {
+		return new ByteValidatable<T>(objectName, fieldName, fieldValue);
 	}
 
-	public static DoubleValidatable<?> number(String fieldName, Double fieldValue) {
-		return new DoubleValidatable<DoubleValidatable<?>>(fieldName, fieldValue);
+	public static <T extends DoubleValidatable<?>> DoubleValidatable<T> number(String fieldName, Double fieldValue) {
+		return new DoubleValidatable<T>(fieldName, fieldValue);
 	}
 
-	public static DoubleValidatable<?> number(String objectName, String fieldName, Double fieldValue) {
-		return new DoubleValidatable<DoubleValidatable<?>>(objectName, fieldName, fieldValue);
+	public static <T extends DoubleValidatable<?>> DoubleValidatable<T> number(String objectName, String fieldName, Double fieldValue) {
+		return new DoubleValidatable<T>(objectName, fieldName, fieldValue);
 	}
 
-	public static IntegerValidatable<?> number(String fieldName, Integer fieldValue) {
-		return new IntegerValidatable<IntegerValidatable<?>>(fieldName, fieldValue);
+	public static <T extends IntegerValidatable<?>> IntegerValidatable<T> number(String fieldName, Integer fieldValue) {
+		return new IntegerValidatable<T>(fieldName, fieldValue);
 	}
 
-	public static IntegerValidatable<?> number(String objectName, String fieldName, Integer fieldValue) {
-		return new IntegerValidatable<IntegerValidatable<?>>(objectName, fieldName, fieldValue);
+	public static <T extends IntegerValidatable<?>> IntegerValidatable<T> number(String objectName, String fieldName, Integer fieldValue) {
+		return new IntegerValidatable<T>(objectName, fieldName, fieldValue);
 	}
 
-	public static LongValidatable<?> number(String fieldName, Long fieldValue) {
-		return new LongValidatable<LongValidatable<?>>(fieldName, fieldValue);
+	public static <T extends LongValidatable<?>> LongValidatable<T> number(String fieldName, Long fieldValue) {
+		return new LongValidatable<T>(fieldName, fieldValue);
 	}
 
-	public static LongValidatable<?> number(String objectName, String fieldName, Long fieldValue) {
-		return new LongValidatable<LongValidatable<?>>(objectName, fieldName, fieldValue);
+	public static <T extends LongValidatable<?>> LongValidatable<T> number(String objectName, String fieldName, Long fieldValue) {
+		return new LongValidatable<T>(objectName, fieldName, fieldValue);
 	}
 
-	public static ShortValidatable<?> number(String fieldName, Short fieldValue) {
-		return new ShortValidatable<ShortValidatable<?>>(fieldName, fieldValue);
+	public static <T extends ShortValidatable<?>> ShortValidatable<T> number(String fieldName, Short fieldValue) {
+		return new ShortValidatable<T>(fieldName, fieldValue);
 	}
 
-	public static ShortValidatable<?> number(String objectName, String fieldName, Short fieldValue) {
-		return new ShortValidatable<ShortValidatable<?>>(objectName, fieldName, fieldValue);
+	public static <T extends ShortValidatable<?>> ShortValidatable<T> number(String objectName, String fieldName, Short fieldValue) {
+		return new ShortValidatable<T>(objectName, fieldName, fieldValue);
 	}
 
-	public static StringValidatable<?> text(String objectName, String fieldName, String fieldValue) {
-		return new StringValidatable<StringValidatable<?>>(objectName, fieldName, fieldValue);
+	public static <T extends StringValidatable<?>> StringValidatable<T> text(String objectName, String fieldName, String fieldValue) {
+		return new StringValidatable<T>(objectName, fieldName, fieldValue);
 	}
 
-	public static StringValidatable<?> text(String fieldName, String fieldValue) {
-		return new StringValidatable<StringValidatable<?>>(fieldName, fieldValue);
+	public static <T extends StringValidatable<?>> StringValidatable<T> text(String fieldName, String fieldValue) {
+		return new StringValidatable<T>(fieldName, fieldValue);
 	}
 
-	public static DateValidatable<?> date(String objectName, String fieldName, Date fieldValue) {
-		return new DateValidatable<DateValidatable<?>>(objectName, fieldName, fieldValue);
+	public static <T extends DateValidatable<?>> DateValidatable<T> date(String objectName, String fieldName, Date fieldValue) {
+		return new DateValidatable<T>(objectName, fieldName, fieldValue);
 	}
 
-	public static DateValidatable<?> date(String fieldName, Date fieldValue) {
-		return new DateValidatable<DateValidatable<?>>(fieldName, fieldValue);
+	public static <T extends DateValidatable<?>> DateValidatable<T> date(String fieldName, Date fieldValue) {
+		return new DateValidatable<T>(fieldName, fieldValue);
 	}
 
-	public static ExpressionValidatable<?> expression(boolean expression) {
-		return new ExpressionValidatable<ExpressionValidatable<?>>(expression);
+	public static <T extends ExpressionValidatable<?>> ExpressionValidatable<T> expression(boolean expression) {
+		return new ExpressionValidatable<T>(expression);
 	}
 
-	public static ExpressionValidatable<?> expression(String fieldName, boolean expression) {
-		return new ExpressionValidatable<ExpressionValidatable<?>>(fieldName, expression);
+	public static <T extends ExpressionValidatable<?>> ExpressionValidatable<T> expression(String fieldName, boolean expression) {
+		return new ExpressionValidatable<T>(fieldName, expression);
 	}
 
-	public static ExpressionValidatable<?> expression(String objectName, String fieldName, boolean expression) {
-		return new ExpressionValidatable<ExpressionValidatable<?>>(objectName, fieldName, expression);
+	public static <T extends ExpressionValidatable<?>> ExpressionValidatable<T> expression(String objectName, String fieldName, boolean expression) {
+		return new ExpressionValidatable<T>(objectName, fieldName, expression);
 	}
 
-	public static ObjectValidatable<?> object(String fieldName, Object object) {
-		return new ObjectValidatable<ObjectValidatable<?>>(fieldName, object);
+	public static <T extends ObjectValidatable<?>> ObjectValidatable<T> object(String fieldName, Object object) {
+		return new ObjectValidatable<T>(fieldName, object);
 	}
 
-	public static ObjectValidatable<?> object(String objectName, String fieldName, Object object) {
-		return new ObjectValidatable<ObjectValidatable<?>>(objectName, fieldName, object);
+	public static <T extends ObjectValidatable<?>> ObjectValidatable<T> object(String objectName, String fieldName, Object object) {
+		return new ObjectValidatable<T>(objectName, fieldName, object);
 	}
 }
